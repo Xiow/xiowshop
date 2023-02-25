@@ -2,3 +2,11 @@
 2023-02-25 22:00:35.803 [DEBU] {6c912f0a0e164717c413ef1357b448d2} [ 10 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`created_at`,`pic_url`,`updated_at`,`sort`) VALUES('111','2023-02-25 22:00:35','222','2023-02-25 22:00:35',11) 
 2023-02-25 22:03:59.086 [DEBU] {40ac525f3d16471776a9bb3ea4f2af9a} [ 17 ms] [default] [goframeshop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
 2023-02-25 22:03:59.090 [DEBU] {40ac525f3d16471776a9bb3ea4f2af9a} [  3 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`sort`,`updated_at`,`pic_url`,`created_at`) VALUES('111',11,'2023-02-25 22:03:59','222','2023-02-25 22:03:59') 
+2023-02-25 22:25:16.934 [DEBU] {b463bce566174717de9c8650446ffddf} [  6 ms] [default] [goframeshop] [rows:0  ] [txid:1] BEGIN
+2023-02-25 22:25:16.955 [DEBU] {b463bce566174717de9c8650446ffddf} [ 18 ms] [default] [goframeshop] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2023-02-25 22:25:16.957 [DEBU] {b463bce566174717de9c8650446ffddf} [  2 ms] [default] [goframeshop] [rows:1  ] [txid:1] DELETE FROM `rotation_info` WHERE `id`=8
+2023-02-25 22:25:16.964 [DEBU] {b463bce566174717de9c8650446ffddf} [  6 ms] [default] [goframeshop] [rows:0  ] [txid:1] COMMIT
+2023-02-25 22:25:30.969 [DEBU] {686a872a6a174717df9c865094955d6d} [  3 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `rotation_info`(`sort`,`link`,`created_at`,`pic_url`,`updated_at`) VALUES(11,'111','2023-02-25 22:25:30','222','2023-02-25 22:25:30') 
+2023-02-25 22:25:53.522 [DEBU] {405bc96a6f174717e19c8650bfeace1a} [  3 ms] [default] [goframeshop] [rows:0  ] [txid:2] BEGIN
+2023-02-25 22:25:53.527 [DEBU] {405bc96a6f174717e19c8650bfeace1a} [  5 ms] [default] [goframeshop] [rows:1  ] [txid:2] DELETE FROM `rotation_info` WHERE `id`=10
+2023-02-25 22:25:53.532 [DEBU] {405bc96a6f174717e19c8650bfeace1a} [  4 ms] [default] [goframeshop] [rows:0  ] [txid:2] COMMIT
