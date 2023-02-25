@@ -1,0 +1,4 @@
+2023-02-25 22:00:35.790 [DEBU] {6c912f0a0e164717c413ef1357b448d2} [ 13 ms] [default] [goframeshop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-02-25 22:00:35.803 [DEBU] {6c912f0a0e164717c413ef1357b448d2} [ 10 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`created_at`,`pic_url`,`updated_at`,`sort`) VALUES('111','2023-02-25 22:00:35','222','2023-02-25 22:00:35',11) 
+2023-02-25 22:03:59.086 [DEBU] {40ac525f3d16471776a9bb3ea4f2af9a} [ 17 ms] [default] [goframeshop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-02-25 22:03:59.090 [DEBU] {40ac525f3d16471776a9bb3ea4f2af9a} [  3 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`sort`,`updated_at`,`pic_url`,`created_at`) VALUES('111',11,'2023-02-25 22:03:59','222','2023-02-25 22:03:59') 

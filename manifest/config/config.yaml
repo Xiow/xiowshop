@@ -1,0 +1,21 @@
+server:
+  address: ":8888"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+logger:
+  level: "all"
+  stdout: true
+
+# 数据库连接配置
+database:
+  logger:
+    path: "logs/sql"
+    level: "all"
+    stdout: true
+    ctxKeys: [ "RequestId" ]
+
+  #记得修改成自己的数据库密码
+  default:
+    link: "mysql:root:123456@tcp(127.0.0.1:3306)/goframeshop"
+    debug: true
