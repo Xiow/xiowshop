@@ -5,5 +5,8 @@
 package logic
 
 import (
+	_ "gongzhaoweishop/internal/logic/admin"
+	//_ "gongzhaoweishop/internal/logic/login"
+	_ "gongzhaoweishop/internal/logic/position"
 	_ "gongzhaoweishop/internal/logic/rotation"
 )

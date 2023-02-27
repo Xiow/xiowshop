@@ -2,3 +2,213 @@
 2023-02-27 16:32:50.432 [DEBU] {54c5367954a147173df4f848a4b61292} [  5 ms] [default] [goframeshop] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC LIMIT 0,10
 2023-02-27 16:32:50.435 [DEBU] {54c5367954a147173df4f848a4b61292} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
 2023-02-27 16:32:50.437 [DEBU] {54c5367954a147173df4f848a4b61292} [  1 ms] [default] [goframeshop] [rows:2  ] SELECT `id`,`pic_url`,`sort`,`link`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC LIMIT 0,10
+2023-02-27 16:56:25.665 [DEBU] {400c9afc9da247178b52f8066220e294} [ 14 ms] [default] [goframeshop] [rows:9  ] SHOW FULL COLUMNS FROM `position_info`
+2023-02-27 16:56:25.674 [DEBU] {400c9afc9da247178b52f8066220e294} [  8 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `position_info`(`updated_at`,`link`,`sort`,`created_at`,`goods_id`,`pic_url`,`goods_name`) VALUES('2023-02-27 16:56:25','aaaaaaaaa',10,'2023-02-27 16:56:25',8,'www.baidu.com','黄金蛋糕') 
+2023-02-27 17:09:39.024 [DEBU] {e06731b556a347179d225e2295c74b74} [  2 ms] [default] [goframeshop] [rows:0  ] [txid:1] BEGIN
+2023-02-27 17:09:39.034 [DEBU] {e06731b556a347179d225e2295c74b74} [  7 ms] [default] [goframeshop] [rows:9  ] [txid:1] SHOW FULL COLUMNS FROM `position_info`
+2023-02-27 17:09:39.040 [DEBU] {e06731b556a347179d225e2295c74b74} [  5 ms] [default] [goframeshop] [rows:1  ] [txid:1] UPDATE `position_info` SET `goods_name`='黄金小蛋糕',`goods_id`=8,`updated_at`='2023-02-27 17:09:39',`pic_url`='www.baidu.com',`link`='aaaaaaaaa',`sort`=10 WHERE (`id`=3) AND `deleted_at` IS NULL
+2023-02-27 17:09:39.043 [DEBU] {e06731b556a347179d225e2295c74b74} [  3 ms] [default] [goframeshop] [rows:0  ] [txid:1] COMMIT
+2023-02-27 17:09:54.161 [DEBU] {8c7d453b5aa347179e225e226d415058} [  5 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `position_info`(`updated_at`,`goods_name`,`goods_id`,`created_at`,`link`,`sort`,`pic_url`) VALUES('2023-02-27 17:09:54','黄金蛋糕',8,'2023-02-27 17:09:54','aaaaaaaaa',10,'www.baidu.com') 
+2023-02-27 17:10:03.066 [DEBU] {8459f84d5ca347179f225e222fdbe489} [  6 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `position_info`(`sort`,`goods_name`,`goods_id`,`pic_url`,`created_at`,`link`,`updated_at`) VALUES(10,'黄金中蛋糕',8,'www.baidu.com','2023-02-27 17:10:03','aaaaaaaaa','2023-02-27 17:10:03') 
+2023-02-27 17:11:19.203 [DEBU] {24b954086ea34717a1225e22dcb25594} [  3 ms] [default] [goframeshop] [rows:0  ] [txid:2] BEGIN
+2023-02-27 17:11:19.210 [DEBU] {24b954086ea34717a1225e22dcb25594} [  5 ms] [default] [goframeshop] [rows:1  ] [txid:2] UPDATE `position_info` SET `deleted_at`='2023-02-27 17:11:19' WHERE (`id`=5) AND `deleted_at` IS NULL
+2023-02-27 17:11:19.213 [DEBU] {24b954086ea34717a1225e22dcb25594} [  2 ms] [default] [goframeshop] [rows:0  ] [txid:2] COMMIT
+2023-02-27 17:13:26.803 [DEBU] {e4d3babd8ba34717a3225e22c0bf94d4} [  4 ms] [default] [goframeshop] [rows:2  ] SELECT `id`,`pic_url`,`goods_name`,`link`,`sort`,`goods_id`,`created_at`,`updated_at`,`deleted_at` FROM `position_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC LIMIT 0,20
+2023-02-27 17:13:26.807 [DEBU] {e4d3babd8ba34717a3225e22c0bf94d4} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT COUNT(1) FROM `position_info` WHERE `deleted_at` IS NULL
+2023-02-27 17:13:26.808 [DEBU] {e4d3babd8ba34717a3225e22c0bf94d4} [  1 ms] [default] [goframeshop] [rows:2  ] SELECT `id`,`pic_url`,`link`,`goods_name`,`goods_id`,`sort`,`created_at`,`updated_at` FROM `position_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC LIMIT 0,20
+2023-02-27 18:15:17.222 [DEBU] {ece318a3eba64717f616e00c8ce7e49a} [ 17 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 18:15:17.229 [ERRO] {ece318a3eba64717f616e00c8ce7e49a} [  4 ms] [default] [goframeshop] [rows:0  ] INSERT INTO `admin_info`(`role_ids`,`user_salt`,`is_admin`,`created_at`,`password`,`name`,`updated_at`) VALUES('11111','a7LGsqFakH',11111,'2023-02-27 18:15:17','24e46f269e065900047b81d77f219728','gongzhaowei','2023-02-27 18:15:17') 
+Error: Error 1264: Out of range value for column 'is_admin' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core.go:671
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core_underlying.go:279
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core_underlying.go:136
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core.go:448
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_insert.go:202
+8.  gongzhaoweishop/internal/logic/admin.(*sAdmin).Create
+    D:/goframe/xwshop/gongzhaoweishop/internal/logic/admin/admin.go:36
+9.  gongzhaoweishop/internal/controller.(*cAdmin).Create
+    D:/goframe/xwshop/gongzhaoweishop/internal/controller/admin.go:16
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:152
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:75
+14. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+16. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_middleware_handler_response.go:25
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:55
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:54
+20. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+22. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_middleware_tracing.go:78
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:96
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:95
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+28. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_server_handler.go:132
+
+2023-02-27 18:15:54.748 [DEBU] {a4e27d60f4a64717f716e00c974de092} [  8 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `admin_info`(`user_salt`,`is_admin`,`created_at`,`name`,`updated_at`,`password`,`role_ids`) VALUES('YY7dbs7Nsx',1,'2023-02-27 18:15:54','gongzhaowei','2023-02-27 18:15:54','2e59dc00d5892ba5e291bef8f3c61ad2','1') 
+2023-02-27 18:17:09.022 [ERRO] {b84e65ab05a74717f816e00c5c1454e1} [ 11 ms] [default] [goframeshop] [rows:0  ] INSERT INTO `admin_info`(`user_salt`,`is_admin`,`created_at`,`name`,`updated_at`,`password`,`role_ids`) VALUES('bd5noYSP5q',1,'2023-02-27 18:17:09','李四','2023-02-27 18:17:09','4a256e384b20ebe840d8896662f66ed6','1') 
+Error: Error 1062: Duplicate entry '李四' for key 'name_unique'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core.go:671
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core_underlying.go:279
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core_underlying.go:136
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core.go:448
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_insert.go:202
+8.  gongzhaoweishop/internal/logic/admin.(*sAdmin).Create
+    D:/goframe/xwshop/gongzhaoweishop/internal/logic/admin/admin.go:36
+9.  gongzhaoweishop/internal/controller.(*cAdmin).Create
+    D:/goframe/xwshop/gongzhaoweishop/internal/controller/admin.go:16
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:152
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:75
+14. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+16. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_middleware_handler_response.go:25
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:55
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:54
+20. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+22. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_middleware_tracing.go:78
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:96
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:95
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+28. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_server_handler.go:132
+
+2023-02-27 19:37:04.394 [DEBU] {20060e2d62ab471743ace64067379992} [ 24 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 19:37:04.397 [DEBU] {20060e2d62ab471743ace64067379992} [  2 ms] [default] [goframeshop] [rows:5  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` LIMIT 0,10
+2023-02-27 19:37:04.400 [DEBU] {20060e2d62ab471743ace64067379992} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT COUNT(1) FROM `admin_info`
+2023-02-27 19:37:04.401 [DEBU] {20060e2d62ab471743ace64067379992} [  0 ms] [default] [goframeshop] [rows:5  ] SELECT `id`,`name`,`role_ids`,`is_admin`,`created_at`,`updated_at` FROM `admin_info` LIMIT 0,10
+2023-02-27 19:37:26.538 [DEBU] {4c595b5667ab471744ace64096d55b9d} [  1 ms] [default] [goframeshop] [rows:5  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` LIMIT 0,10
+2023-02-27 19:37:26.539 [DEBU] {4c595b5667ab471744ace64096d55b9d} [  0 ms] [default] [goframeshop] [rows:1  ] SELECT COUNT(1) FROM `admin_info`
+2023-02-27 19:37:26.540 [DEBU] {4c595b5667ab471744ace64096d55b9d} [  1 ms] [default] [goframeshop] [rows:5  ] SELECT `id`,`name`,`role_ids`,`is_admin`,`created_at`,`updated_at` FROM `admin_info` LIMIT 0,10
+2023-02-27 19:38:30.079 [DEBU] {dc4f9c2076ab471745ace640b3cf5e7d} [ 19 ms] [default] [goframeshop] [rows:0  ] [txid:1] BEGIN
+2023-02-27 19:38:30.084 [DEBU] {dc4f9c2076ab471745ace640b3cf5e7d} [  4 ms] [default] [goframeshop] [rows:1  ] [txid:1] DELETE FROM `admin_info` WHERE `id`=13
+2023-02-27 19:38:30.089 [DEBU] {dc4f9c2076ab471745ace640b3cf5e7d} [  4 ms] [default] [goframeshop] [rows:0  ] [txid:1] COMMIT
+2023-02-27 20:48:05.097 [DEBU] {7880473342af4717d9c8ec7afd77f161} [ 16 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 20:48:05.100 [DEBU] {00a1433442af4717dac8ec7a71cee5a2} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 20:48:37.632 [DEBU] {98f84ac749af4717dcc8ec7a42058db2} [  3 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:04:22.151 [DEBU] {1c7494b025b04717dec8ec7af9026bc5} [ 10 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:18:32.611 [DEBU] {900a29b4ebb04717eac0711b3b1737c7} [  6 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:18:32.615 [DEBU] {0c81b3b4ebb04717ebc0711b02a9834a} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:18:32.619 [DEBU] {b0a1e9b4ebb04717ecc0711bf27c1738} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:18:32.626 [DEBU] {50f01db5ebb04717edc0711be23d849a} [  5 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:18:32.639 [DEBU] {98b574b5ebb04717eec0711b103afb3f} [ 13 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:18:32.643 [DEBU] {e84b51b6ebb04717efc0711b8fa8c7ee} [  2 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:18:32.647 [DEBU] {546085b6ebb04717f0c0711b5344470e} [  3 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:22:59.329 [DEBU] {1c79b8cd29b14717ad3c1d3de8bf0013} [  8 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:22:59.332 [DEBU] {c87145ce29b14717ae3c1d3d837460bc} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:22:59.336 [DEBU] {fc1b76ce29b14717af3c1d3d31f54315} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:22:59.339 [DEBU] {e0009ece29b14717b03c1d3df6c49fe0} [  2 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:22:59.341 [DEBU] {b435c7ce29b14717b13c1d3d0a705d8b} [  2 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:22:59.343 [DEBU] {c0b3ecce29b14717b23c1d3dc3ff603d} [  1 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:22:59.344 [DEBU] {f8c00bcf29b14717b33c1d3d3d98ccaa} [  0 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:29:24.669 [DEBU] {b852638583b14717f5d86c19a1ff168b} [ 14 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:29:24.672 [DEBU] {cc29548683b14717f6d86c19fa1c279d} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:29:24.675 [DEBU] {38297f8683b14717f7d86c19522db405} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:29:24.677 [DEBU] {b4ad928683b14717f8d86c19e29f8067} [  2 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:29:24.681 [DEBU] {d4b2b38683b14717f9d86c190b5ad506} [  4 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:29:24.683 [DEBU] {6416f78683b14717fad86c1953781cce} [  2 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:29:24.685 [DEBU] {c8a1168783b14717fbd86c19c605b2cd} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:32:18.117 [DEBU] {20404be8abb147178c011541b8fdae71} [  4 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:32:18.119 [DEBU] {986599e8abb147178d011541706dce3a} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:32:18.121 [DEBU] {3059c2e8abb147178e01154112918a84} [  0 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:32:18.124 [DEBU] {d4c7d2e8abb147178f0115411c59c3c3} [  2 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:32:18.126 [DEBU] {dc4bece8abb1471790011541db3128a5} [  2 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:32:18.128 [DEBU] {b01c15e9abb14717910115411aa27d9f} [  2 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:32:18.128 [DEBU] {303c2fe9abb14717920115410ea7ae93} [  0 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:32:50.585 [DEBU] {e8b77477b3b1471794011541e94117af} [  5 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:32:50.587 [DEBU] {6438dc77b3b14717950115414062023f} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:32:50.589 [DEBU] {285af177b3b1471796011541664a5ca0} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:32:50.590 [DEBU] {c0030578b3b1471797011541355888ee} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:33:21.175 [DEBU] {a01ab196bab147173fe54d1000054bc6} [  6 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:33:21.179 [DEBU] {8cdd2e97bab1471740e54d10f9166e0b} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:33:21.181 [DEBU] {80e16897bab1471741e54d1093bd48b5} [  0 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:33:21.185 [DEBU] {1ce78097bab1471742e54d100d5ab572} [  3 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:33:21.186 [DEBU] {6cc3b397bab1471743e54d10147a293f} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:33:21.188 [DEBU] {744cc897bab1471744e54d103afae415} [  1 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:33:21.189 [DEBU] {acefe797bab1471745e54d1028651542} [  0 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:34:08.856 [DEBU] {546b41b0c5b14717065fb26bda6eb614} [ 14 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:34:08.862 [DEBU] {c47728b1c5b14717075fb26b8f2d6161} [  5 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:34:08.864 [DEBU] {18e37cb1c5b14717085fb26bea13a3f8} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:34:08.869 [DEBU] {b8ba96b1c5b14717095fb26b14079c7c} [  4 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:34:08.871 [DEBU] {3089e6b1c5b147170a5fb26b9b19065a} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:34:08.873 [DEBU] {6c5ffcb1c5b147170b5fb26bb9a65e0c} [  2 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:34:08.874 [DEBU] {e8f818b2c5b147170c5fb26b003e5257} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 21:34:53.473 [DEBU] {94dffb13d0b147171cf12e1760b3c313} [  8 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 21:34:53.476 [DEBU] {7c778a14d0b147171df12e17f25664fa} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 21:34:53.478 [DEBU] {6491b014d0b147171ef12e17ae43ef9d} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 21:34:53.480 [DEBU] {68bec014d0b147171ff12e176e52bf72} [  2 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 21:34:53.481 [DEBU] {9811e814d0b1471720f12e170815d5c4} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 21:34:53.483 [DEBU] {f0e10015d0b1471721f12e17958abd9a} [  1 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 21:34:53.486 [DEBU] {50f42415d0b1471722f12e1780c91d8c} [  2 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-27 22:46:08.279 [DEBU] {c03e2262b3b547178471ad24c5c43ae2} [ 11 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-27 22:46:08.282 [DEBU] {f0c7d662b3b547178571ad24e2704c35} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-27 22:46:08.288 [DEBU] {18714663b3b547178671ad24a9510d4a} [  0 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-27 22:46:08.290 [DEBU] {10cc5763b3b547178771ad243819c8fe} [  1 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-27 22:46:08.291 [DEBU] {2c297063b3b547178871ad247b7fd446} [  1 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-27 22:46:08.293 [DEBU] {64868a63b3b547178971ad2499f2d121} [  1 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-27 22:46:08.296 [DEBU] {70509b63b3b547178a71ad24e0f1428d} [  3 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
