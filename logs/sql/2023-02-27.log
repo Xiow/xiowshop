@@ -1,0 +1,4 @@
+2023-02-27 16:32:50.425 [DEBU] {54c5367954a147173df4f848a4b61292} [ 21 ms] [default] [goframeshop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-02-27 16:32:50.432 [DEBU] {54c5367954a147173df4f848a4b61292} [  5 ms] [default] [goframeshop] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC LIMIT 0,10
+2023-02-27 16:32:50.435 [DEBU] {54c5367954a147173df4f848a4b61292} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2023-02-27 16:32:50.437 [DEBU] {54c5367954a147173df4f848a4b61292} [  1 ms] [default] [goframeshop] [rows:2  ] SELECT `id`,`pic_url`,`sort`,`link`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `sort` DESC LIMIT 0,10

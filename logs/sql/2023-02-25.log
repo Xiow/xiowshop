@@ -14,3 +14,8 @@
 2023-02-25 22:37:19.728 [DEBU] {f821fa2e0f18471703296b01a6d96712} [ 10 ms] [default] [goframeshop] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
 2023-02-25 22:37:19.731 [DEBU] {f821fa2e0f18471703296b01a6d96712} [  3 ms] [default] [goframeshop] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `link`='www',`pic_url`='wwww',`updated_at`='2023-02-25 22:37:19',`sort`=99 WHERE (`id`=9) AND `deleted_at` IS NULL
 2023-02-25 22:37:19.733 [DEBU] {f821fa2e0f18471703296b01a6d96712} [  2 ms] [default] [goframeshop] [rows:0  ] [txid:1] COMMIT
+2023-02-25 22:48:15.376 [DEBU] {3cb234d7a7184717ee8d2925f6208c84} [  8 ms] [default] [goframeshop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-02-25 22:48:15.380 [DEBU] {3cb234d7a7184717ee8d2925f6208c84} [  2 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `rotation_info`(`created_at`,`pic_url`,`sort`,`link`,`updated_at`) VALUES('2023-02-25 22:48:15','222',11,'111','2023-02-25 22:48:15') 
+2023-02-25 22:48:25.329 [DEBU] {08f2e828aa184717ef8d2925cac05a07} [  0 ms] [default] [goframeshop] [rows:0  ] [txid:1] BEGIN
+2023-02-25 22:48:25.331 [DEBU] {08f2e828aa184717ef8d2925cac05a07} [  2 ms] [default] [goframeshop] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `deleted_at`='2023-02-25 22:48:25' WHERE (`id`=11) AND `deleted_at` IS NULL
+2023-02-25 22:48:25.332 [DEBU] {08f2e828aa184717ef8d2925cac05a07} [  1 ms] [default] [goframeshop] [rows:0  ] [txid:1] COMMIT
