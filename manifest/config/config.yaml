@@ -19,3 +19,13 @@ database:
   default:
     link: "mysql:root:123456@tcp(127.0.0.1:3306)/goframeshop"
     debug: true
+# Redis 配置示例
+redis:
+  default:
+    address: 127.0.0.1:6379
+    db: 1
+    pass:
+    idleTimeout: 600
+
+upload:
+  path: "upload"

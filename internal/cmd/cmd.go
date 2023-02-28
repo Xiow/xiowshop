@@ -14,6 +14,7 @@ import (
 	"gongzhaoweishop/internal/controller"
 	"gongzhaoweishop/internal/dao"
 	"gongzhaoweishop/internal/model/entity"
+	"gongzhaoweishop/internal/service"
 	"gongzhaoweishop/utility"
 	"gongzhaoweishop/utility/response"
 	"strconv"
@@ -26,25 +27,35 @@ var (
 		Brief: "start http server",
 		Func: func(ctx context.Context, parser *gcmd.Parser) (err error) {
 			s := g.Server()
-			// 认证接口
-			//loginFunc := Login
 			// 启动gtoken
 			gfAdminToken := &gtoken.GfToken{
+				CacheMode:        1,
 				ServerName:       "shop",
 				LoginPath:        "/backend/login",
 				LoginBeforeFunc:  LoginFunc,
 				LoginAfterFunc:   loginAfterFunc,
 				LogoutPath:       "/backend/user/logout",
+				AuthPaths:        g.SliceStr{"/backend/admin/info"},
 				AuthExcludePaths: g.SliceStr{"/admin/user/info", "/admin/system/user/info"}, // 不拦截路径 /user/info,/system/user/info,/system/user,
+				AuthAfterFunc:    authAfterFunc,
 				MultiLogin:       true,
 			}
-			// 认证接口
+			//todo 抽取方法
+			err = gfAdminToken.Start()
+			if err != nil {
+				return err
+			}
 			s.Group("/", func(group *ghttp.RouterGroup) {
-				group.Middleware(ghttp.MiddlewareHandlerResponse)
-				err := gfAdminToken.Middleware(ctx, group)
-				if err != nil {
-					panic(err)
-				}
+				group.Middleware(
+					service.Middleware().CORS,
+					service.Middleware().Ctx,
+					service.Middleware().ResponseHandler,
+				)
+				//gtoken中间件绑定
+				//err := gfAdminToken.Middleware(ctx, group)
+				//if err != nil {
+				//	panic(err)
+				//}
 				group.Bind(
 					controller.Hello,        //示例
 					controller.Rotation,     // 轮播图
@@ -54,9 +65,25 @@ var (
 					controller.Admin.Delete, // 管理员
 					controller.Admin.List,   // 管理员
 					controller.Login,        // 登录
+					//controller.Data,         // 数据大屏相关
+					controller.Role, // 角色
+					controller.File,
 				)
-				group.ALLMap(g.Map{
-					"/backend/admin/info": controller.Admin.Info,
+				// Special handler that needs authentication.
+				group.Group("/", func(group *ghttp.RouterGroup) {
+					//group.Middleware(service.Middleware().Auth) //for jwt
+					err := gfAdminToken.Middleware(ctx, group)
+					if err != nil {
+						panic(err)
+					}
+					group.ALLMap(g.Map{
+						"/backend/admin/info": controller.Admin.Info,
+					})
+					//group.Middleware(service.Middleware().GTokenSetCtx, ) //for gtoken
+					//todo 优化代码 返回的数据格式和之前的一致
+					//group.ALL("/backend/admin/info", func(r *ghttp.Request) {
+					//	r.Response.WriteJson(gfAdminToken.GetTokenData(r).Data)
+					//})
 				})
 			})
 			s.Run()

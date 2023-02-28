@@ -1,0 +1,106 @@
+2023-02-28 15:34:43.472 [DEBU] {e0537228bdec471768621e74d282ad34} [ 77 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2023-02-28 15:34:43.488 [ERRO] {e0537228bdec471768621e74d282ad34} [ 13 ms] [default] [goframeshop] [rows:0  ] INSERT INTO `role_info`(`desc`,`created_at`,`name`,`updated_at`) VALUES('','2023-02-28 15:34:43','运营','2023-02-28 15:34:43') 
+Error: Error 1062: Duplicate entry '运营' for key 'unique_index'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core.go:671
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core_underlying.go:279
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core_underlying.go:136
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_core.go:448
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_insert.go:371
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/database/gdb/gdb_model_insert.go:202
+8.  gongzhaoweishop/internal/logic/role.(*sRole).Create
+    D:/goframe/xwshop/gongzhaoweishop/internal/logic/role/role.go:22
+9.  gongzhaoweishop/internal/controller.(*cRole).Create
+    D:/goframe/xwshop/gongzhaoweishop/internal/controller/role.go:16
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:152
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:75
+14. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+16. gongzhaoweishop/internal/logic/middleware.(*sMiddleware).ResponseHandler
+    D:/goframe/xwshop/gongzhaoweishop/internal/logic/middleware/middleware.go:53
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:55
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:54
+20. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+22. gongzhaoweishop/internal/logic/middleware.(*sMiddleware).Ctx
+    D:/goframe/xwshop/gongzhaoweishop/internal/logic/middleware/middleware.go:110
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:55
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:54
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+28. gongzhaoweishop/internal/logic/middleware.(*sMiddleware).CORS
+    D:/goframe/xwshop/gongzhaoweishop/internal/logic/middleware/middleware.go:115
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:55
+30. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:54
+32. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+34. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_middleware_tracing.go:78
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:96
+36. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_func.go:55
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:95
+38. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/util/gutil/gutil.go:56
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_request_middleware.go:49
+40. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.2/net/ghttp/ghttp_server_handler.go:132
+
+2023-02-28 15:36:12.202 [DEBU] {68dbfbd4d1ec471769621e749803407a} [ 17 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `role_info`(`desc`,`created_at`,`name`,`updated_at`) VALUES('','2023-02-28 15:36:12','运营2','2023-02-28 15:36:12') 
+2023-02-28 15:42:02.174 [DEBU] {70848c5023ed4717d5b56c57a2541cb6} [ 25 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-28 15:42:02.177 [DEBU] {1cf1085223ed4717d6b56c57339625d2} [  3 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-28 15:44:43.234 [DEBU] {28198bd048ed4717be449c010d269622} [ 24 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-28 15:44:43.239 [DEBU] {dc6c04d248ed4717bf449c012ad031ea} [  4 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-28 15:45:56.767 [DEBU] {44fbf7ef59ed4717c1449c01b0d832ca} [ 15 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-28 15:46:02.985 [DEBU] {0cf5c1625bed4717c2449c019abf918b} [ 11 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2023-02-28 15:46:02.995 [DEBU] {0cf5c1625bed4717c2449c019abf918b} [  9 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `role_info`(`updated_at`,`desc`,`created_at`,`name`) VALUES('2023-02-28 15:46:02','','2023-02-28 15:46:02','运营3') 
+2023-02-28 16:11:58.899 [DEBU] {28fd44a5c5ee4717ab0be5400995d0e2} [ 25 ms] [default] [goframeshop] [rows:7  ] SHOW FULL COLUMNS FROM `file_info`
+2023-02-28 16:11:58.918 [DEBU] {28fd44a5c5ee4717ab0be5400995d0e2} [ 15 ms] [default] [goframeshop] [rows:1  ] SELECT COUNT(1) FROM `file_info` WHERE (`user_id`=0) AND (`created_at` >= '2023-02-28 16:10:58')
+2023-02-28 16:11:58.927 [DEBU] {28fd44a5c5ee4717ab0be5400995d0e2} [  4 ms] [default] [goframeshop] [rows:1  ] INSERT INTO `file_info`(`src`,`url`,`created_at`,`updated_at`,`name`) VALUES('upload\20230228\cqu1m4dyepzof5ehwi.png','/upload/20230228/cqu1m4dyepzof5ehwi.png','2023-02-28 16:11:58','2023-02-28 16:11:58','cqu1m4dyepzof5ehwi.png') 
+2023-02-28 16:33:10.394 [DEBU] {38de87b1edef4717374a7e79f99a8b5d} [ 11 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-28 16:33:10.397 [DEBU] {f4193ab2edef4717384a7e791daba31b} [  2 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-28 16:33:10.399 [DEBU] {18216eb2edef4717394a7e79140b80ae} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='16' LIMIT 1
+2023-02-28 16:33:10.404 [DEBU] {e44c76b2edef47173a4a7e79e31d32b0} [  5 ms] [default] [goframeshop] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-02-28 16:33:10.473 [DEBU] {6c32d1b2edef47173b4a7e79873e3748} [ 67 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('1')
+2023-02-28 16:33:10.476 [DEBU] {50f3e6b6edef47173c4a7e79252207db} [  3 ms] [default] [goframeshop] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-02-28 16:33:10.482 [DEBU] {84e114b7edef47173d4a7e798310cec3} [  5 ms] [default] [goframeshop] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-02-28 16:34:18.705 [DEBU] {7cecfc98fdef4717deb16d7d08dfdcee} [ 14 ms] [default] [goframeshop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-02-28 16:34:18.709 [DEBU] {70b0f899fdef4717dfb16d7dce19cfc3} [  1 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1
+2023-02-28 16:34:57.425 [DEBU] {1038389d06f04717e1b16d7d178bda15} [  9 ms] [default] [goframeshop] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='gongzhaowei' LIMIT 1

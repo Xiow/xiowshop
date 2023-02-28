@@ -6,7 +6,11 @@ package logic
 
 import (
 	_ "gongzhaoweishop/internal/logic/admin"
-	//_ "gongzhaoweishop/internal/logic/login"
+	_ "gongzhaoweishop/internal/logic/bizctx"
+	_ "gongzhaoweishop/internal/logic/file"
+	_ "gongzhaoweishop/internal/logic/middleware"
 	_ "gongzhaoweishop/internal/logic/position"
+	_ "gongzhaoweishop/internal/logic/role"
 	_ "gongzhaoweishop/internal/logic/rotation"
+	_ "gongzhaoweishop/internal/logic/session"
 )
