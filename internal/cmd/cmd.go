@@ -57,7 +57,7 @@ var (
 				//	panic(err)
 				//}
 				group.Bind(
-					controller.Hello,        //示例
+					//controller.Hello,        //示例
 					controller.Rotation,     // 轮播图
 					controller.Position,     // 手工位
 					controller.Admin.Create, // 管理员
@@ -78,6 +78,7 @@ var (
 					}
 					group.ALLMap(g.Map{
 						"/backend/admin/info": controller.Admin.Info,
+						"/hello":              controller.Hello,
 					})
 					//group.Middleware(service.Middleware().GTokenSetCtx, ) //for gtoken
 					//todo 优化代码 返回的数据格式和之前的一致
