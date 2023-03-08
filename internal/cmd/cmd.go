@@ -67,7 +67,8 @@ var (
 					controller.Admin.List,   // 管理员
 					controller.Login,        // 登录
 					//controller.Data,         // 数据大屏相关
-					controller.Role, // 角色
+					controller.Role, //权限相关
+					controller.Permission,
 					controller.File,
 				)
 				// Special handler that needs authentication.
