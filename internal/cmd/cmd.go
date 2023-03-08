@@ -69,6 +69,7 @@ var (
 					//controller.Data,         // 数据大屏相关
 					controller.Role, //权限相关
 					controller.Permission,
+					controller.Order, //订单
 					controller.File,
 				)
 				// Special handler that needs authentication.

@@ -9,6 +9,7 @@ import (
 	_ "gongzhaoweishop/internal/logic/bizctx"
 	_ "gongzhaoweishop/internal/logic/file"
 	_ "gongzhaoweishop/internal/logic/middleware"
+	_ "gongzhaoweishop/internal/logic/order"
 	_ "gongzhaoweishop/internal/logic/permission"
 	_ "gongzhaoweishop/internal/logic/position"
 	_ "gongzhaoweishop/internal/logic/role"
