@@ -71,6 +71,7 @@ var (
 					controller.Permission,
 					controller.Order, //订单
 					controller.File,
+					controller.Article, //文章
 				)
 				// Special handler that needs authentication.
 				group.Group("/", func(group *ghttp.RouterGroup) {

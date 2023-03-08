@@ -6,6 +6,7 @@ package logic
 
 import (
 	_ "gongzhaoweishop/internal/logic/admin"
+	_ "gongzhaoweishop/internal/logic/article"
 	_ "gongzhaoweishop/internal/logic/bizctx"
 	_ "gongzhaoweishop/internal/logic/file"
 	_ "gongzhaoweishop/internal/logic/middleware"
